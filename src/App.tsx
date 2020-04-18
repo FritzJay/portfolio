@@ -1,7 +1,6 @@
 import React from "react";
 import AppBar from "@material-ui/core/AppBar";
 import Button from "@material-ui/core/Button";
-import CameraIcon from "@material-ui/icons/PhotoCamera";
 import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
@@ -13,6 +12,7 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import Link from "@material-ui/core/Link";
+import logo from "./3.png";
 
 function Copyright() {
   return (
@@ -28,8 +28,10 @@ function Copyright() {
 }
 
 const useStyles = makeStyles((theme) => ({
-  icon: {
+  logo: {
     marginRight: theme.spacing(2),
+    width: theme.spacing(10),
+    height: theme.spacing(10),
   },
   heroContent: {
     backgroundColor: theme.palette.background.paper,
@@ -69,7 +71,7 @@ export default () => {
       <CssBaseline />
       <AppBar position="relative">
         <Toolbar>
-          <CameraIcon className={classes.icon} />
+          <img src={logo} alt="Logo" className={classes.logo} />
         </Toolbar>
       </AppBar>
       <main>
